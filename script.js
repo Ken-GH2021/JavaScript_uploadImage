@@ -1,18 +1,23 @@
+let fileInput = document.getElementById("file-input");
+let imageContainer = document.getElementById("images");
+let numOfFiles = document.getElementById("num-of-files");
 
+function preview(){
+    imageContainer.innerHTML = "";
+    numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
 
-const image_upload = document.querySelector("#image_input");
-var uploaded_image = "";
-
-image_upload.addEventListener('change', function() {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-      uploaded_image = reader.result;
-      document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
-    });
-    reader.readAsDataURL(this.files[0]);
-});
-
-
-
-
-
+    for(i of fileInput.files){
+        let reader = new FileReader();
+        let figure = document.createElement("figure");
+        let figCap = document.createElement("figcaption");
+        figCap.innerText = i.name;
+        figure.appendChild(figCap);
+        reader.onload=()=>{
+            let img = document.createElement("img");
+            img.setAttribute("src",reader.result);
+            figure.insertBefore(img,figCap);
+        }
+        imageContainer.appendChild(figure);
+        reader.readAsDataURL(i);
+    }
+}

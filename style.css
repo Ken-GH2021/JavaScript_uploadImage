@@ -1,50 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Rubik",sans-serif;
+}
 body{
-    background: rgba(0,0,0,0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    flex-direction: column;
-    height: 100vh;
-    
-
+    background-color: skyblue;
+    display: inline;
 }
-
-#display_image{
-
-    width: 375px;
-    height: 211px;
-    outline-style:dashed ;
-    border: 1px dashed #fff;
-    background-position: center;
-    background-size: cover;
-    
+.container{
+    background-color: whitesmoke;
+    width: 65%;
+    min-width: 450px;
+    position: relativea;
+    margin:  50px auto;
+    padding: 50px 20px;
+    border-radius: 7px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.05);
 }
-
+input[type="file"]{
+    display: none;
+}
 label{
-
-    
-    
-    padding: 0.5rem;
-    font-family: Arial;
-    border-radius: 0.3rem;
-    cursor: pointer;
-    margin-top: 1rem;
-    color: #fff;
-    justify-content: center;
-    background: #16a085;
-    width: 360px;
-    height: 15px;
+    display: block;
+    position: relative;
+    background-color: #1E90FF;
+    width: 200px;
+    color: #ffffff;
+    font-size: 18px;
     text-align: center;
-    letter-spacing: 4px;
-
-    
-    
+    width: 200px;
+    padding: 10px 0;
+    margin: auto;
+    border: solid black 1.4px;
+    border-radius: 20px;
+    float: left;
+    cursor: pointer;
 }
 
-#image_input{
 
 
-    box-shadow: blue;
 
+.container p{
+    text-align: center;
+    margin: 70px 0 30px 0;
+}
+#images{
+    width: 90%;
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.btn{
+
+    font-size: 18px;
+    color: #ffffff;
+    background-color: #1E90FF;
+    width: 200px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 20px;
+    margin: auto;
+    cursor: pointer;
+    float: right;
+    display: block;
+    padding-top: 10px;
+    
+}
+.btn:hover, btn:focus, .btn:active{
+    box-shadow: 0 0 2px rgba(0 , 0 , 0 ,0.5);
+    -webkit-transform: scale(1.1);
+
+}
+
+
+
+figure{
+    width: 45%;
+}
+img{
+    width: 100%;
+}
+figcaption{
+    text-align: center;
+    font-size: 2.4vmin;
+    margin-top: 0.5vmin;
 }
